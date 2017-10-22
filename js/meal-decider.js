@@ -22,13 +22,19 @@
         'Grilled Chicken',
         'Champaign'
     ];
-    
-    function runProgram(){
 
+
+    
+
+    function runProgram(){
+        
         const mealText = document.querySelector('.meal-name');
         const rand = Math.floor(Math.random() * foodSelection.length);
+        const mealDeciderLogo = document.querySelector('#meal-decider-logo');
         var mealImage = document.querySelector('#meal-image');
     
+    
+        mealDeciderLogo.style.display = 'none';
         mealImage.style.display = 'block';
         mealImage.src = 'img/meal-' + rand + '.png';
         mealText.innerHTML = foodSelection[rand];

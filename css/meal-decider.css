@@ -1,5 +1,18 @@
 h1{
     color: blue;
-    font-size: 100px;
+    font-size: 20px;
 }
+
+.meal-image{
+    display: none;
+    margin: 0 auto;
+    width: 150px;
+
+}
+
+.button{
+    text-align: center;
+    margin: 0 auto;
+}
+
 

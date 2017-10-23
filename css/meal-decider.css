@@ -79,5 +79,20 @@ h1{
     color: white;
 }
 
+.author{
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: -20px;
+    margin-left: 70px;
 
+}
 
+.tableBox{
+    display: none;
+}
+
+.panel .panel-default{
+    background-color: black !important;
+}

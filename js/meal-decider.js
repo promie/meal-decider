@@ -32,8 +32,9 @@
         const rand = Math.floor(Math.random() * foodSelection.length);
         const mealDeciderLogo = document.querySelector('#meal-decider-logo');
         var mealImage = document.querySelector('#meal-image');
-
-    
+        var tableBox = document.querySelector('.tableBox');
+        
+        tableBox.style.display = 'block';
         mealDeciderLogo.style.display = 'none';
         mealImage.style.display = 'block';
         mealImage.src = 'img/meal-' + rand + '.png';

@@ -3,20 +3,7 @@
 
     const foodSelection = [
         {name: 'Pizza', 
-        description: `Pizza is a yeasted flatbread typically topped with 
-                    tomato sauce and cheese and baked in an oven. 
-                    It is commonly topped with a selection of meats, vegetables and condiments.
-                    The term pizza was first recorded in the 10th century, 
-                    in a Latin manuscript from Gaeta in Central Italy.
-                    Modern pizza was invented in Naples, Italy, and the dish and its variants have since become popular and common in many areas of the world.
-                    In 2009, upon Italy's request, Neapolitan pizza was safeguarded in the European Union as a Traditional Speciality Guaranteed dish.
-                    Associazione Verace Pizza Napoletana (True Neapolitan Pizza Association), 
-                    a non-profit organization founded in 1984 with headquarters in Naples, 
-                    aims to "promote and protect... the true Neapolitan pizza". Pizza is sold fresh or frozen, 
-                    either whole or in portions, and is a common fast food item in Europe and 
-                    North America.Various types of ovens are used to cook them and many varieties exist. 
-                    Several similar dishes are prepared from ingredients commonly used in 
-                    pizza preparation, such as calzone and stromboli.`, 
+        description: `Pizza is a yeasted flatbread typically topped with tomato sauce and cheese and baked in an oven. It is commonly topped with a selection of meats, vegetables and condiments.`, 
         calories: `Pizza, 14" regular crust, 100 grams - <strong>266 Calories</strong>`,
         nutritionalFacts: `<strong>Protein: </strong> 11g <br>
                             <strong>Carbohydrate: </strong> 33g <br>
@@ -32,22 +19,52 @@
                         <strong>Phone: </strong>(02) 9281 9677<br>`},
 
         {name: 'Bacon & Eggs', 
-        description: 'Pizza is Great', 
-        calories: '120 Calories',
-        nutritionalFacts: '120 of Sugar', 
-        recommendation: 'SaabWer'},
+        description: 'A dish consisting of fried or grilled slices of bacon and one or more fried eggs, eaten especially as part of a traditional English breakfast I had bacon and eggs for breakfast.', 
+        calories: `Generic: 2 Fried Eggs, 3 Pieces of Bacon & 2 slices of whole wheat light toast - <strong>275 Calories</strong>`,
+        nutritionalFacts: `<strong>Protein: </strong> 26g <br>
+        <strong>Carbohydrate: </strong> 3g <br>
+        <strong>Fat: </strong> 21g`, 
+        recommendation: `<strong><a href="https://www.facebook.com/rusticpearlcafe" target="_blank">Rustic Pearl</a></strong><br>
+        <strong>Address: </strong>415 Crown Street, Surry Hills 2010</br>
+        <strong>Hours: </strong>8am - 4pm,<br>
+        <strong>Phone: </strong>0415 102 561<br>
+        <br>
+        <strong><a href="http://westjuliett.com.au/lunch/" target="_blank">West Juliett</a></strong><br>
+        <strong>Address: </strong>30 Llewellyn St, Marrickville NSW 2204</br>
+        <strong>Hours: </strong>7am - 4pm,<br>
+        <strong>Phone: </strong>(02) 9519 0101<br>`},
 
         {name: 'Kebab', 
-        description: 'Pizza is Great', 
-        calories: '120 Calories',
-        nutritionalFacts: '120 of Sugar', 
-        recommendation: 'SaabWer'},
+        description: 'Lamb, beef or chicken. Variations. İskender, Cağ Cookbook: Döner kebab Media: Döner kebab. Döner kebab (/ˈdɒnər kəˈbæb/, /ˈdoʊnər/; Turkish: döner or döner kebap, [døˈnɛɾ ˈcebɑp], in English often spelled doner or donner) is a Turkish kebab, made of meat cooked on a vertical rotisserie.', 
+        calories: `Chicken/Beef Doner Kebab (301g) - <strong>1,000 Calories</strong>`,
+        nutritionalFacts: `<strong>Protein: </strong> 25g <br>
+        <strong>Carbohydrate: </strong> 54g <br>
+        <strong>Fat: </strong> 26g`, 
+        recommendation: `<strong><a href="https://www.erciyesrestaurant.com.au/" target="_blank">Erciyes Restaurant</a></strong><br>
+        <strong>Address: </strong>409 Cleveland Street, Surry Hills 2010</br>
+        <strong>Hours: </strong>11am - 3am,<br>
+        <strong>Phone: </strong>(02) 9319 1309<br>
+        <br>
+        <strong><a href="https://www.zomato.com/sydney/brothers-kebabs-rockdale" target="_blank">Brothers Kebab</a></strong><br>
+        <strong>Address: </strong>315 Princes Hwy, Banksia NSW 2216</br>
+        <strong>Hours: </strong>10am - 1am,<br>
+        <strong>Phone: </strong>(02) 9567 4194<br>`},
 
         {name: 'Taco', 
-        description: 'Pizza is Great', 
-        calories: '120 Calories',
-        nutritionalFacts: '120 of Sugar', 
-        recommendation: 'SaabWer'},
+        description: 'A taco is a traditional Mexican dish composed of a corn or wheat tortilla folded or rolled around a filling. A taco can be made with a variety of fillings, including beef, pork, chicken, seafood, vegetables, and cheese, allowing for great versatility and variety. A taco is generally eaten without utensils and is often accompanied by garnishes such as salsa, chili pepper, avocado, guacamole, cilantro (coriander), tomatoes, onions, and lettuce.', 
+        calories: `Taco, hard, with beef, cheese and lettuce (100g) - <strong>226 Calories</strong>`,
+        nutritionalFacts: `<strong>Protein: </strong> 9g <br>
+        <strong>Carbohydrate: </strong> 20g <br>
+        <strong>Fat: </strong> 13g`, 
+        recommendation: `<strong><a href="http://merivale.com.au/elloco" target="_blank">El Loco</a></strong><br>
+        <strong>Address: </strong>64 Foveaux Street, Surry Hills NSW 2010</br>
+        <strong>Hours: </strong>10am - 12am,<br>
+        <strong>Phone: </strong>(02) 9254 8088<br>
+        <br>
+        <strong><a href="https://www.mejico.com.au/" target="_blank">Mejico</a></strong><br>
+        <strong>Address: </strong>105 Pitt Street, Sydney NSW 2000</br>
+        <strong>Hours: </strong>12pm - 12am,<br>
+        <strong>Phone: </strong>(02) 9503 0119<br>`},
 
         {name: 'Croissant', 
         description: 'Pizza is Great', 

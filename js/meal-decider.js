@@ -1,190 +1,363 @@
+// MODEL
 
-
-
-    const foodSelection = [
-        {name: 'Pizza', 
-        description: `Pizza is a yeasted flatbread typically topped with tomato sauce and cheese and baked in an oven. It is commonly topped with a selection of meats, vegetables and condiments.`, 
-        calories: `Pizza, 14" regular crust, 100 grams - <strong>266 Calories</strong>`,
-        nutritionalFacts: `<strong>Protein: </strong> 11g <br>
-                            <strong>Carbohydrate: </strong> 33g <br>
-                            <strong>Fat: </strong> 10g`, 
-        recommendation: `<strong><a href="http://www.madpizzaebar.com/" target="_blank">Mad Pizza E Bar</a></strong><br>
-                        <strong>Address: </strong>135 King Street, Newtown 2042</br>
-                        <strong>Hours: </strong>12pm - 12am,<br>
-                        <strong>Phone: </strong>1300 112 210<br>
-                        <br>
-                        <strong><a href="https://www.bondipizza.com.au/" target="_blank">Bondi Pizza Broadway</a></strong><br>
-                        <strong>Address: </strong>208/1 Bay Street, Glebe NSW 2007</br>
-                        <strong>Hours: </strong>11am - 9pm,<br>
-                        <strong>Phone: </strong>(02) 9281 9677<br>`},
-
-        {name: 'Bacon & Eggs', 
+const foodSelections = [
+    // Pizza object
+    {
+        name: 'Pizza', 
+        description: 'Pizza is a yeasted flatbread typically topped with tomato sauce and cheese and baked in an oven. It is commonly topped with a selection of meats, vegetables and condiments.', 
+        calories: [266, 'Pizza, 14" regular crust, 100 grams'],
+        nutrition: [11, 33, 10], //Protein, Carbs & fat
+        recommendation: [
+            {
+                url: 'http://www.madpizzaebar.com/',
+                name: 'Mad Pizza E Bar',
+                address: '135 King Street, Newtown 2042',
+                hours: [12, 12],
+                phone: '1300 112 210',
+            },
+            {
+                url: 'https://www.bondipizza.com.au/',
+                name: 'Bondi Pizza Broadway',
+                address: '208/1 Bay Street, Glebe NSW 2007',
+                hours: [11, 9],
+                phone: '(02) 9281 9677',
+            }
+        ]
+    },
+    // Bacon & Eggs Object
+    {
+        name: 'Bacon & Eggs', 
         description: 'A dish consisting of fried or grilled slices of bacon and one or more fried eggs, eaten especially as part of a traditional English breakfast I had bacon and eggs for breakfast.', 
-        calories: `Generic: 2 Fried Eggs, 3 Pieces of Bacon & 2 slices of whole wheat light toast - <strong>275 Calories</strong>`,
-        nutritionalFacts: `<strong>Protein: </strong> 26g <br>
-        <strong>Carbohydrate: </strong> 3g <br>
-        <strong>Fat: </strong> 21g`, 
-        recommendation: `<strong><a href="https://www.facebook.com/rusticpearlcafe" target="_blank">Rustic Pearl</a></strong><br>
-        <strong>Address: </strong>415 Crown Street, Surry Hills 2010</br>
-        <strong>Hours: </strong>8am - 4pm,<br>
-        <strong>Phone: </strong>0415 102 561<br>
-        <br>
-        <strong><a href="http://westjuliett.com.au/lunch/" target="_blank">West Juliett</a></strong><br>
-        <strong>Address: </strong>30 Llewellyn St, Marrickville NSW 2204</br>
-        <strong>Hours: </strong>7am - 4pm,<br>
-        <strong>Phone: </strong>(02) 9519 0101<br>`},
+        calories: [275, 'Generic: 2 Fried Eggs, 3 Pieces of Bacon & 2 slices of whole wheat light toast'],
+        nutrition: [26, 3, 21], 
+        recommendation: [
+            {
+                url: 'https://www.facebook.com/rusticpearlcafe',
+                name: 'Rustic Pearl',
+                address: '415 Crown Street, Surry Hills 2010',
+                hours: [8, 4],
+                phone: '0415 102 561',
+            },
+            {
+                url: 'http://westjuliett.com.au/lunch/',
+                name: 'West Juliett',
+                address: '30 Llewellyn St, Marrickville NSW 2204',
+                hours: [7, 4],
+                phone: '(02) 9519 0101',
+            },
+        ]
+    },
+        // Kebab Object
+        {
+            name: 'Kebab', 
+            description: 'Lamb, beef or chicken. Variations. İskender, Cağ Cookbook: Döner kebab Media: Döner kebab. Döner kebab (/ˈdɒnər kəˈbæb/, /ˈdoʊnər/; Turkish: döner or döner kebap, [døˈnɛɾ ˈcebɑp], in English often spelled doner or donner) is a Turkish kebab, made of meat cooked on a vertical rotisserie.', 
+            calories: [1000, 'Chicken/Beef Doner Kebab (301g)'],
+            nutrition: [25, 24, 56], 
+            recommendation: [
+                {
+                    url: 'https://www.erciyesrestaurant.com.au/',
+                    name: 'Erciyes Restaurant',
+                    address: '409 Cleveland Street, Surry Hills 2010',
+                    hours: [11, 3],
+                    phone: '(02) 9319 1309',
+                },
+                {
+                    url: 'https://www.zomato.com/sydney/brothers-kebabs-rockdale',
+                    name: 'Brothers Kebab',
+                    address: '315 Princes Hwy, Banksia NSW 2216',
+                    hours: [10, 1],
+                    phone: '(02) 9567 4194',
+                },
+            ]
+        },
+        // Taco Object
+        {
+            name: 'Taco', 
+            description: 'A taco is a traditional Mexican dish composed of a corn or wheat tortilla folded or rolled around a filling. A taco can be made with a variety of fillings, including beef, pork, chicken, seafood, vegetables, and cheese, allowing for great versatility and variety. A taco is generally eaten without utensils and is often accompanied by garnishes such as salsa, chili pepper, avocado, guacamole, cilantro (coriander), tomatoes, onions, and lettuce.', 
+            calories: [226, 'Taco, hard, with beef, cheese and lettuce (100g)'],
+            nutrition: [9, 20, 13], 
+            recommendation: [
+                {
+                    url: 'http://merivale.com.au/elloco',
+                    name: 'El Loco',
+                    address: '64 Foveaux Street, Surry Hills NSW 2010',
+                    hours: [10, 12],
+                    phone: '(02) 9254 8088',
+                },
+                {
+                    url: 'https://www.mejico.com.au/',
+                    name: 'Mejico',
+                    address: '105 Pitt Street, Sydney NSW 2000',
+                    hours: [12, 12],
+                    phone: '(02) 9503 0119',
+                },
+            ]
+        },
+        // Croissant Object
+        {
+            name: 'Croissant', 
+            description: 'A croissant is a buttery, flaky, viennoiserie pastry named for its well-known crescent shape. Croissants and other viennoiserie are made of a layered yeast-leavened dough.The process results in a layered, flaky texture, similar to a puff pastry.', 
+            calories: [406, 'Croissant, butter (100g)'],
+            nutrition: [8, 46, 21], 
+            recommendation: [
+                {
+                    url: 'https://www.facebook.com/PennyFours/',
+                    name: 'Penny Fours Leichhardt',
+                    address: '141 Norton St, Leichhardt NSW 2040',
+                    hours: [8, 4],
+                    phone: '(02) 9572 8550',
+                },
+                {
+                    url: 'http://www.textbookpatisserie.com.au/',
+                    name: 'Textbook Boulangerie Patisserie',
+                    address: '274 Botany Rd, Alexandria NSW 2015',
+                    hours: [7, 4],
+                    phone: '(02) 9699 6156',
+                },
+            ]
+        },
+        // Pancakes Object
+        {
+            name: 'Pancake', 
+            description: 'A pancake (or hotcake, griddlecake, or flapjack) is a flat cake, often thin and round, prepared from a starch-based batter that may contain eggs, milk and butter and cooked on a hot surface such as a griddle or frying pan, often frying with oil or butter. In Britain, pancakes are often unleavened and resemble a crepe', 
+            calories: [227, 'Pancakes (100g)'],
+            nutrition: [6, 28, 10], 
+            recommendation: [
+                {
+                    url: 'http://www.pancakesontherocks.com.au/menu/',
+                    name: 'Pancakes On The Rocks',
+                    address: '4 Hickson Rd, The Rocks NSW 2000',
+                    hours: [24],
+                    phone: '(02) 9247 6371',
+                },
+                {
+                    url: 'http://threewilliamscafe.com/',
+                    name: 'Three Williams',
+                    address: '613A Elizabeth St, Redfern NSW 2016',
+                    hours: [7, 4],
+                    phone: '(02) 9698 1111',
+                },
+            ]
+        },
+        // Pad Thai Noodles Object
+        {
+            name: 'Pad Thai', 
+            description: 'Pad Thai is a stir-fried noodle dish, typical street fare in Thailand and perhaps the #1 order at your local Thai restaurant. The traditional version is a bit funky (fish sauce and dried shrimp), sour (fresh tamarind paste), and sweet (palm sugar)', 
+            calories: [610, 'Pad Thai Chicken (1 Plate)'],
+            nutrition: [24, 92, 16], 
+            recommendation: [
+                {
+                    url: 'http://www.saabwer.com.au/',
+                    name: 'Saab Wer Thai Esan Restaurant',
+                    address: '105 King St, Newtown NSW 2042',
+                    hours: [11, 10],
+                    phone: '(02) 8580 1345',
+                },
+                {
+                    url: 'http://www.chatthai.com.au/',
+                    name: 'Chat Thai',
+                    address: '20 Campbell St, Haymarket NSW 2000',
+                    hours: [10, 2],
+                    phone: '(02) 9211 1808',
+                },
+            ]
+        },
+        // Sushi Object
+        {
+            name: 'Sushi', 
+            description: 'Sushi can be prepared with either brown or white rice. It is often prepared with raw seafood, but some varieties of sushi use cooked ingredients, and many other are vegetarian. Sushi is often served with pickled ginger, wasabi, and soy sauce', 
+            calories: [304, 'Salmon &amp Avocado Roll (1 Roll)'],
+            nutrition: [20, 64, 21], 
+            recommendation: [
+                {
+                    url: 'https://www.zomato.com/sydney/sushi-tengoku-kensington/menu',
+                    name: 'Sushi Tengoku',
+                    address: 'B/262 Anzac Parade, Kensington NSW 2033',
+                    hours: [11, 9],
+                    phone: '(02) 9663 3388',
+                },
+                {
+                    url: 'http://nijisushi.com.au/',
+                    name: 'Niji Sushi Bar',
+                    address: '333 Anzac Parade, Kingsford NSW 2032',
+                    hours: [12, 10],
+                    phone: '(02) 8068 4849',
+                },
+            ]
+        },
+        // Hamburger Object
+        {
+            name: 'Hamburger', 
+            description: 'Hamburgers are often served with cheese, lettuce, tomato, bacon, onion, pickles, or chiles; condiments such as mustard, mayonnaise, ketchup, relish, or "special sauce"; and are frequently placed on sesame seed buns', 
+            calories: [295, 'Hamburger, double patty (100 grams)'],
+            nutrition: [17, 24, 14], 
+            recommendation: [
+                {
+                    url: 'http://bigdaddysburgerbar.com.au/',
+                    name: 'Big Daddys Burger Bar',
+                    address: '227 King St, Newtown NSW 2042',
+                    hours: [11, 12],
+                    phone: '(02) 9517 4335',
+                },
+                {
+                    url: 'https://www.moogourmetburgers.com.au/',
+                    name: 'Moo Gourmet Burgers Newtown',
+                    address: '232 King St, Newtown NSW 2042',
+                    hours: [11, 9],
+                    phone: '(02) 9565 4001',
+                },
+            ]
+        },
+        // Bacon Object
+        {
+            name: 'Bacon', 
+            description: 'Bacon is a meat product prepared from cured pork. It is first cured using large quantities of salt, either a brine or a dry packing. ... Fresh and dried bacon are typically cooked before eating, often by pan frying. Boiled bacon is ready to eat, as is some smoked bacon, but they may be cooked further before eating.', 
+            calories: [548, 'Bacon, baked (100 grams)'],
+            nutrition: [37, 2, 42], 
+            recommendation: [
+                {
+                    url: 'http://www.cuckoo-callay.com.au/',
+                    name: 'Cuckoo Callay',
+                    address: '324A King St, Newtown NSW 2042',
+                    hours: [8, 4],
+                    phone: '(02) 9557 7006',
+                },
+                {
+                    url: 'http://www.devoncafe.com.au/',
+                    name: 'Devon Cafe',
+                    address: '76 Devonshire St, Surry Hills NSW 2010',
+                    hours: [8, 3],
+                    phone: '(02) 9211 8777',
+                },
+            ]
+        },
+        // Korean BBQ Object
+        {
+            name: 'Korean BBQ', 
+            description: 'Korean barbecue. Korean barbecue refers to the popular method in Korean cuisine of grilling meat, typically beef, pork, or chicken. Such dishes are often prepared on gas or charcoal grills built into the dining table itself', 
+            calories: [331, 'Samgyeopsal (Grilled Pork) (100 grams)'],
+            nutrition: [17, 1, 28], 
+            recommendation: [
+                {
+                    url: 'https://www.zomato.com/sydney/hanyang-galbi-strathfield',
+                    name: 'Hanyang Galbi',
+                    address: '28/45-47 The Boulevarde, Strathfield NSW 2135',
+                    hours: [11, 10],
+                    phone: '(02) 9763 7374',
+                },
+                {
+                    url: 'https://www.facebook.com/Madang2006',
+                    name: 'Sydney Madang Korean BBQ',
+                    address: '371A Pitt St, Sydney NSW 2000',
+                    hours: [11, 2],
+                    phone: '(02) 9264 7010',
+                },
+            ]
+        },
+        // Ice Cream Object
+        {
+            name: 'Ice Cream', 
+            description: 'Ice cream (derived from earlier iced cream or cream ice) is a sweetened frozen food typically eaten as a snack or dessert. It is usually made from dairy products, such as milk and cream, and often combined with fruits or other ingredients and flavors. It is typically sweetened with sugar or sugar substitutes', 
+            calories: [207, 'Ice cream, vanilla (100 grams)'],
+            nutrition: [4, 24, 11], 
+            recommendation: [
+                {
+                    url: 'https://www.facebook.com/Cow-and-the-Moon-GelatoCoffeeDessert-Bar-145041955555930/',
+                    name: 'Cow &amp The Moon',
+                    address: '181 Enmore Rd, Enmore NSW 2042',
+                    hours: [8, 11],
+                    phone: '(02) 9557 4255',
+                },
+                {
+                    url: 'http://www.gelatomessina.com/au/',
+                    name: 'Gelato Messina - Surry Hills',
+                    address: '389 Crown St, Surry Hills NSW 2010',
+                    hours: [12, 11],
+                    phone: '(02) 9332 1191',
+                },
+            ]
+        },
 
-        {name: 'Kebab', 
-        description: 'Lamb, beef or chicken. Variations. İskender, Cağ Cookbook: Döner kebab Media: Döner kebab. Döner kebab (/ˈdɒnər kəˈbæb/, /ˈdoʊnər/; Turkish: döner or döner kebap, [døˈnɛɾ ˈcebɑp], in English often spelled doner or donner) is a Turkish kebab, made of meat cooked on a vertical rotisserie.', 
-        calories: `Chicken/Beef Doner Kebab (301g) - <strong>1,000 Calories</strong>`,
-        nutritionalFacts: `<strong>Protein: </strong> 25g <br>
-        <strong>Carbohydrate: </strong> 54g <br>
-        <strong>Fat: </strong> 26g`, 
-        recommendation: `<strong><a href="https://www.erciyesrestaurant.com.au/" target="_blank">Erciyes Restaurant</a></strong><br>
-        <strong>Address: </strong>409 Cleveland Street, Surry Hills 2010</br>
-        <strong>Hours: </strong>11am - 3am,<br>
-        <strong>Phone: </strong>(02) 9319 1309<br>
-        <br>
-        <strong><a href="https://www.zomato.com/sydney/brothers-kebabs-rockdale" target="_blank">Brothers Kebab</a></strong><br>
-        <strong>Address: </strong>315 Princes Hwy, Banksia NSW 2216</br>
-        <strong>Hours: </strong>10am - 1am,<br>
-        <strong>Phone: </strong>(02) 9567 4194<br>`},
-
-        {name: 'Taco', 
-        description: 'A taco is a traditional Mexican dish composed of a corn or wheat tortilla folded or rolled around a filling. A taco can be made with a variety of fillings, including beef, pork, chicken, seafood, vegetables, and cheese, allowing for great versatility and variety. A taco is generally eaten without utensils and is often accompanied by garnishes such as salsa, chili pepper, avocado, guacamole, cilantro (coriander), tomatoes, onions, and lettuce.', 
-        calories: `Taco, hard, with beef, cheese and lettuce (100g) - <strong>226 Calories</strong>`,
-        nutritionalFacts: `<strong>Protein: </strong> 9g <br>
-        <strong>Carbohydrate: </strong> 20g <br>
-        <strong>Fat: </strong> 13g`, 
-        recommendation: `<strong><a href="http://merivale.com.au/elloco" target="_blank">El Loco</a></strong><br>
-        <strong>Address: </strong>64 Foveaux Street, Surry Hills NSW 2010</br>
-        <strong>Hours: </strong>10am - 12am,<br>
-        <strong>Phone: </strong>(02) 9254 8088<br>
-        <br>
-        <strong><a href="https://www.mejico.com.au/" target="_blank">Mejico</a></strong><br>
-        <strong>Address: </strong>105 Pitt Street, Sydney NSW 2000</br>
-        <strong>Hours: </strong>12pm - 12am,<br>
-        <strong>Phone: </strong>(02) 9503 0119<br>`},
-
-        {name: 'Croissant', 
-        description: 'Pizza is Great', 
-        calories: '120 Calories',
-        nutritionalFacts: '120 of Sugar', 
-        recommendation: 'SaabWer'},
-
-        {name: 'Pancakes', 
-        description: 'Pizza is Great', 
-        calories: '120 Calories',
-        nutritionalFacts: '120 of Sugar', 
-        recommendation: 'SaabWer'},        
-        
-        {name: 'Stir Fried Noodles', 
-        description: 'Pizza is Great', 
-        calories: '120 Calories',
-        nutritionalFacts: '120 of Sugar', 
-        recommendation: 'SaabWer'},
-
-        {name: 'Sushi', 
-        description: 'Pizza is Great', 
-        calories: '120 Calories',
-        nutritionalFacts: '120 of Sugar', 
-        recommendation: 'SaabWer'},
-
-        {name: 'Hamburger', 
-        description: 'Pizza is Great', 
-        calories: '120 Calories',
-        nutritionalFacts: '120 of Sugar', 
-        recommendation: 'SaabWer'},
-
-        {name: 'Bacon', 
-        description: 'Pizza is Great', 
-        calories: '120 Calories',
-        nutritionalFacts: '120 of Sugar', 
-        recommendation: 'SaabWer'},        
-        
-        {name: 'BBQ', 
-        description: 'Pizza is Great', 
-        calories: '120 Calories',
-        nutritionalFacts: '120 of Sugar', 
-        recommendation: 'SaabWer'},
-
-        {name: 'Ice Cream', 
-        description: 'Pizza is Great', 
-        calories: '120 Calories',
-        nutritionalFacts: '120 of Sugar', 
-        recommendation: 'SaabWer'},        
-        
-        {name: 'Pasta', 
-        description: 'Pizza is Great', 
-        calories: '120 Calories',
-        nutritionalFacts: '120 of Sugar', 
-        recommendation: 'SaabWer'},
-
-        {name: 'Stuffed Chicken', 
-        description: 'Pizza is Great', 
-        calories: '120 Calories',
-        nutritionalFacts: '120 of Sugar', 
-        recommendation: 'SaabWer'},
-
-        {name: 'Coffee', 
-        description: 'Pizza is Great', 
-        calories: '120 Calories',
-        nutritionalFacts: '120 of Sugar', 
-        recommendation: 'SaabWer'},        
-        
-        {name: 'Orange Juice', 
-        description: 'Pizza is Great', 
-        calories: '120 Calories',
-        nutritionalFacts: '120 of Sugar', 
-        recommendation: 'SaabWer'},        
-        
-        {name: 'Beer', 
-        description: 'Pizza is Great', 
-        calories: '120 Calories',
-        nutritionalFacts: '120 of Sugar', 
-        recommendation: 'SaabWer'},
-
-        {name: 'Grilled Chicken', 
-        description: 'Pizza is Great', 
-        calories: '120 Calories',
-        nutritionalFacts: '120 of Sugar', 
-        recommendation: 'SaabWer'},    
-
-        {name: 'Champagne', 
-        description: 'Pizza is Great', 
-        calories: '120 Calories',
-        nutritionalFacts: '120 of Sugar', 
-        recommendation: 'SaabWer'}        
-        
-    ];
-
-
+// end
+]
     
+// CONTROLLER
 
-    function runProgram(){
-        
-        const mealText = document.getElementById('meal-name');
-        const mealDescription = document.getElementById('food-description');
-        const mealCalories = document.getElementById('calories');
-        const mealNutrition = document.getElementById('nutrition');
-        const mealRecommendation = document.getElementById('recommendation');
-        const rand = Math.floor(Math.random() * foodSelection.length);
-        const mealDeciderLogo = document.querySelector('#meal-decider-logo');
-        var mealImage = document.querySelector('#meal-image');
-        var tableBox = document.querySelector('.tableBox');
-        var runButton = document.getElementById('run');
-        
-        tableBox.style.display = 'block';
-        mealDeciderLogo.style.display = 'none';
-        mealImage.style.display = 'block';
-        mealImage.src = 'img/meal-' + rand + '.png';
-        runButton.innerHTML = "REFRESH";
+function formatDescription(description) {
+    return `<strong>${description}</strong>`
+}
 
-        mealText.innerHTML = foodSelection[rand].name;
-        mealDescription.innerHTML = foodSelection[rand].description;
-        mealCalories.innerHTML = foodSelection[rand].calories;
-        mealNutrition.innerHTML = foodSelection[rand].nutritionalFacts;
-        mealRecommendation.innerHTML = foodSelection[rand].recommendation;
+function formatRecommendations(recommendations) {
+    var htmlStr = ''
+    recommendations.forEach((recommend) => {
+        htmlStr += formatStrongNormal('Name:', formatHref(recommend.url, recommend.name))
+        htmlStr += formatStrongNormal('Address:', recommend.address)
+        htmlStr += formatStrongNormal('Hours:', openingTimeFormat(recommend.hours))
+        htmlStr += formatStrongNormal('Phone:', recommend.phone) + '<br>'
+    })
+    return htmlStr;
+
+}
+
+function formatStrongNormal(strong, normal) {
+    return `<strong>${strong}</strong> ${normal}<br>`
+}
+
+function formatHref(url, name){
+    return `<a ref="${url} target="_blank">${name}</a>`
+}
+
+function formatCalories(caloriesArray){
+    return `${caloriesArray[1]} - <strong>${caloriesArray[0]} Calories</strong>`
+}
+
+function openingTimeFormat(timeArray){
+
+    if(timeArray.length === 1){
+        return 'Open 24 Hours';
+    }else{
+        return `${timeArray[0]}am to ${timeArray[1]}pm`
     }
+}
 
+function formatNutrition(nutritionArray){
+    return `<strong>Protein: </strong>${nutritionArray[0]}g<br><strong>Carbohydrate: </strong>${nutritionArray[1]}g<br><strong>Fat: </strong>${nutritionArray[2]}g`
+}
 
+function randomizeFoodImage(randomNum){
+    return `img/meal-${randomNum}.png`
+}
+
+// VIEW
+
+    function runProgram() {
+        
+        //Random Calculation
+        const rand = Math.floor(Math.random() * foodSelections.length);
+
+        //Food Descriptions
+        const mealText = document.getElementById('meal-name');
+        mealText.innerHTML = formatDescription(foodSelections[rand].name);
+        const mealDescription = document.getElementById('food-description');
+        mealDescription.innerHTML = foodSelections[rand].description;
+        const mealCalories = document.getElementById('calories');
+        mealCalories.innerHTML = formatCalories(foodSelections[rand].calories);
+        const mealNutrition = document.getElementById('nutrition');
+        mealNutrition.innerHTML = formatNutrition(foodSelections[rand].nutrition);
+        const mealRecommendation = document.getElementById('recommendation');
+        mealRecommendation.innerHTML = formatRecommendations(foodSelections[rand].recommendation);
+
+        //CSS Styling
+        var tableBox = document.getElementById('tableBox');
+        tableBox.style.display = 'block';
+        const mealDeciderLogo = document.getElementById('meal-decider-logo');
+        mealDeciderLogo.style.display = 'none';
+        var mealImage = document.getElementById('meal-image');
+        mealImage.style.display = 'block';
+        mealImage.src = randomizeFoodImage(rand);
+
+        
+        //Execution Button
+        var runButton = document.getElementById('run');
+        runButton.innerHTML = "REFRESH";
+    }

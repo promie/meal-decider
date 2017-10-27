@@ -89,10 +89,15 @@ h1{
 
 }
 
-.tableBox{
+#tableBox{
     display: none;
 }
 
 .panel .panel-default{
     background-color: black !important;
+}
+
+.bold-text{
+    font-weight: bold;
+    font-size: 15px;
 }

@@ -1,8 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Abel');
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-
-
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
 
 body{
     background-image: url("http://walldiskpaper.com/wp-content/uploads/2014/11/Yellow-Wallpaper-Android-HD.jpg");
@@ -12,31 +10,10 @@ body{
 
 }
 
-
+/* ===== FORMAT =====*/
 h1{
     color: blue;
     font-size: 20px;
-}
-
-.meal-image{
-    display: none;
-    margin: 0 auto;
-    width: 200px;
-
-}
-
-.button{
-    text-align: center;
-    margin: 0 auto;
-}
-
-.meal-decider-logo{
-    width: 300px;
-}
-
-
-.marginTop{
-    margin-top: 20px;
 }
 
 .info-box{
@@ -59,6 +36,10 @@ h1{
     background-color: rgba(255,255,255,0.95);
 }
 
+.marginTop{
+    margin-top: 20px;
+}
+
 .moving-element{
     margin-top: 20px;
     margin-bottom: 40px;
@@ -66,6 +47,54 @@ h1{
 
 .move-box{
     margin-top: -5px;
+}
+
+.bold-text{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.text-font{
+    font-size: 17px;
+}
+
+
+/* ===== IMAGE FORMAT =====*/
+.meal-image{
+    display: none;
+    margin: 0 auto;
+    width: 200px;
+
+}
+
+.meal-decider-logo{
+    width: 300px;
+}
+
+/* ===== FOOD DESCRIPTION BOX =====*/
+.author{
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: 'Abel', sans-serif;
+
+}
+
+#tableBox{
+    display: none;
+}
+
+.meal-name{
+    font-family: 'Fredoka One', cursive;
+    font-size: 35px;
+    color:green;
+}
+
+/* ===== BUTTONS =====*/
+.button{
+    text-align: center;
+    margin: 0 auto;
 }
 
 .runProgram{
@@ -86,35 +115,12 @@ h1{
     color: white;
 }
 
-.author{
-    font-weight: bold;
-    color: black;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-family: 'Abel', sans-serif;
-
-
-}
-
-#tableBox{
-    display: none;
-}
-
-.panel .panel-default{
-    background-color: black !important;
-}
-
-.bold-text{
-    font-weight: bold;
-    font-size: 20px;
-}
-
 .github{
     font-size: 35px;
     text-decoration: none;
     color: black;
     margin-left: 80px;
-    margin-top: -10px;
+    margin-top: -7px;
 }
 
 .github:hover{
@@ -122,17 +128,9 @@ h1{
     text-decoration: none;
     color: black;
     margin-left: 80px;
-    margin-top: -10px;
+    margin-top: -7px;
     color: green;
 }
 
-.meal-name{
-    font-family: 'Permanent Marker', cursive;
-    font-size: 35px;
-    color:green;
-}
 
 
-.text-font{
-    font-size: 17px;
-}

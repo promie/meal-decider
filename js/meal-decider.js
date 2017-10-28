@@ -466,7 +466,7 @@ function formatStrongNormal(strong, normal) {
 }
 
 function formatHref(url, name){
-    return `<a ref="${url} target="_blank">${name}</a>`
+    return `<a href="${url}" target="_blank">${name}</a>`
 }
 
 function formatCalories(caloriesArray){
@@ -491,7 +491,9 @@ function randomizeFoodImage(randomNum){
 }
 
 function ontopOfPage(){
-    document.body.scrollTop = 0;
+
+    var onTop = document.body.scrollTop;
+    onTop = document.documentElement.scrollTop = 0;
 }
 
 // VIEW
@@ -530,5 +532,5 @@ function ontopOfPage(){
         
         //Execution Button
         var runButton = document.getElementById('run');
-        runButton.innerHTML = "RELOAD";
+        runButton.innerHTML= 'REFRESH';
     }

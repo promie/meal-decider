@@ -277,7 +277,169 @@ const foodSelections = [
                 },
             ]
         },
+        // Pasta Object
+        {
+            name: 'Pasta', 
+            description: 'Also commonly used to refer to the variety of pasta dishes, pasta is typically a noodle made from an unleavened dough of a durum wheat flour mixed with water or eggs and formed into sheets or various shapes, then cooked by boiling or baking.', 
+            calories: [131, 'Pasta, fresh-refrigerated, cooked (100 grams)'],
+            nutrition: [5, 25, 1], 
+            recommendation: [
+                {
+                    url: 'https://www.gpogrand.com/intermezzo-best-italian-restaurant-sydney-cbd',
+                    name: 'Intermezzo Italian Restaurant',
+                    address: '4 & 5 Ground Floor, Sydney GPO Building, 1 Martin Pl, Sydney NSW 2000',
+                    hours: [8, 10],
+                    phone: '(02) 9229 7788',
+                },
+                {
+                    url: 'http://www.mantecato.com.au/',
+                    name: 'Mantecato',
+                    address: '129/85 Reynolds St, Balmain NSW 2041',
+                    hours: [12, 10],
+                    phone: '(02) 9810 9125',
+                },
+            ]
+        },
 
+        // Sashimi Object
+        {
+            name: 'Sashimi', 
+            description: 'Sashimi is thinly sliced, raw food. Seafood is most commonly eaten as sashimi, but other types of meats (such as beef, horse and deer) and foods (such as yuba tofu skin and konnyaku) can also be served as sashimi. Some people confuse sashimi with sushi. Unlike sashimi, sushi includes vinegared rice', 
+            calories: [120, 'Salmon - Wild (Sashimi) (3 pieces)'],
+            nutrition: [15, 0, 6], 
+            recommendation: [
+                {
+                    url: 'http://tetsuyas.com/',
+                    name: 'Tetsuya\'s',
+                    address: '529 Kent St, Sydney NSW 2000',
+                    hours: [11, 10],
+                    phone: '(02) 9267 2900',
+                },
+                {
+                    url: 'http://www.yukis.com.au/',
+                    name: 'Yukis Japanese Restaurant',
+                    address: 'Overseas Passenger Terminal, Circular Quay W, The Rocks NSW 2000',
+                    hours: [6, 10],
+                    phone: '(02) 9252 8600',
+                },
+            ]
+        },
+        // Coffee Object
+        {
+            name: 'Coffee', 
+            description: 'There are two distinct points to note your coffee\'s aroma: When the beans are just ground (known as Dry aroma) and when just completing the brew (called Wet aroma or at Break). Flavor / Taste – The variety of discernable tastes, such as chocolate, berry, citrus, caramel, sweet, used in describing coffee', 
+            calories: [9, 'Coffee, espresso'],
+            nutrition: [1, 1, 0], 
+            recommendation: [
+                {
+                    url: 'https://coffeealchemy.com.au/',
+                    name: 'Coffee Alchemy',
+                    address: '24 Addison Rd, Marrickville NSW 2204',
+                    hours: [8, 3],
+                    phone: '(02) 9516 1997',
+                },
+                {
+                    url: 'https://www.gpogrand.com/maximus-best-espresso-cafe-sydney-cbd',
+                    name: 'Maximus Cafe, Sydney',
+                    address: '14 Ground Floor, No. 1 Martin Place, Sydney GPO Building, Sydney, NSW, Sydney NSW 2000',
+                    hours: [7, 4],
+                    phone: '(02) 9229 7711',
+                },
+            ]
+        },
+        // Orange Juice Object
+        {
+            name: 'Orange Juice', 
+            description: 'Orange juice is the liquid extract of the fruit of the orange tree, produced by squeezing oranges. It comes in several different varieties, including blood orange, navel oranges, valencia orange, clementine, and tangerine. As well as variations in oranges used, some varieties include differing amounts of juice vesicles, known as "pulp" in American English, and "juicy bits" in British English. These vesicles contain the juice of the orange and can be left in or removed during the manufacturing process. How juicy these vesicles are depend upon many factors, such as species, variety, and season. In American English, the beverage name may be abbreviated as "OJ".', 
+            calories: [45, 'Orange Juice (100 grams)'],
+            nutrition: [1, 10, 1], 
+            recommendation: [
+                {
+                    url: 'http://www.fruitologist.com.au/',
+                    name: 'Fruitologist Union Place',
+                    address: '120 Terry St, Rozelle NSW 2039',
+                    hours: [7, 8],
+                    phone: '(02) 9555 1612',
+                },
+                {
+                    url: 'http://www.nudie.com.au/',
+                    name: 'nudie Foods',
+                    address: '77 Corish Cir, Eastgardens NSW 2036',
+                    hours: [8, 5],
+                    phone: '(02) 9316 3700',
+                },
+            ]
+        },
+        // Beer Object
+        {
+            name: 'Beer', 
+            description: 'The definition of beer goes something like this: an alcoholic beverage, made from malted cereal grain, flavored with hops, and brewed by slow fermentation. The English word “beer” comes from the Latin “bibere” meaning, “to drink”. Mainly, beer is made from malted barley, hops, yeast and water.', 
+            calories: [92, 'Pure Blonde - Beer (Low Carb) (1 Bottle (355mL))'],
+            nutrition: [1, 2, 0], 
+            recommendation: [
+                {
+                    url: 'http://www.willietheboatman.com/',
+                    name: 'Willie the Boatman',
+                    address: '202/75 Mary St, St Peters NSW 2044',
+                    hours: [12, 7],
+                    phone: '0413 514 026',
+                },
+                {
+                    url: 'http://www.kegandbrew.com.au/',
+                    name: 'Keg & Brew',
+                    address: '26 Foveaux St, Surry Hills NSW 2010',
+                    hours: [10, 11],
+                    phone: '(02) 9212 1740',
+                },
+            ]
+        },
+        // Salad Object
+        {
+            name: 'Salad', 
+            description: 'Salad. A garden salad consisting of lettuce, cucumber, scallions, cherry tomatoes, olives, sun-dried tomatoes, and cheese. Main ingredients. A base of vegetables, fruits, meat, eggs, or grains; mixed with a sauce.', 
+            calories: [81, 'Bacon Ranch Salad with Grilled Chicken (100 grams)'],
+            nutrition: [10, 4, 3], 
+            recommendation: [
+                {
+                    url: 'https://www.facebook.com/goodlifesalad/',
+                    name: 'Good Life',
+                    address: '77 York St, Sydney NSW 2000',
+                    hours: [6, 4],
+                    phone: '(02) 9290 1223',
+                },
+                {
+                    url: 'http://sumosalad.com/introducing-sumosalad-green-label/',
+                    name: 'SumoSalad Green Label',
+                    address: 'RG15/500 George St, Sydney NSW 2000',
+                    hours: [9, 10],
+                    phone: '(02) 9212 1740',
+                },
+            ]
+        },
+        // Champagne Object
+        {
+            name: 'Champagne', 
+            description: 'Champagne is a bubbly white wine that people often drink to celebrate happy occasions. When you pull the cork out of a bottle of champagne, it makes a loud pop. Traditionally, the sparkling wine known as champagne came from a specific region of France and was made from certain grapes grown there.', 
+            calories: [76, 'Champagne (100mL)'],
+            nutrition: [1, 1, 0], 
+            recommendation: [
+                {
+                    url: 'http://www.grandmasbarsydney.com.au/',
+                    name: 'Grandmar\'s Bar',
+                    address: '275 Clarence St, Sydney NSW 2000',
+                    hours: [5, 11],
+                    phone: '(02) 9264 3004',
+                },
+                {
+                    url: 'http://champagneroom.com.au/',
+                    name: 'Champagne Room',
+                    address: ' l1/285A Crown St, Surry Hills NSW 2010',
+                    hours: [11, 11],
+                    phone: '(02) 8322 2007',
+                },
+            ]
+        },
+        
 // end
 ]
     
@@ -328,9 +490,16 @@ function randomizeFoodImage(randomNum){
     return `img/meal-${randomNum}.png`
 }
 
+function ontopOfPage(){
+    document.body.scrollTop = 0;
+}
+
 // VIEW
 
     function runProgram() {
+
+        //Top of Page Function Call
+        ontopOfPage();
         
         //Random Calculation
         const rand = Math.floor(Math.random() * foodSelections.length);
@@ -355,9 +524,11 @@ function randomizeFoodImage(randomNum){
         var mealImage = document.getElementById('meal-image');
         mealImage.style.display = 'block';
         mealImage.src = randomizeFoodImage(rand);
+        var authorText = document.getElementById('author');
+        authorText.style.display = 'none';
 
         
         //Execution Button
         var runButton = document.getElementById('run');
-        runButton.innerHTML = "REFRESH";
+        runButton.innerHTML = "RELOAD";
     }

@@ -16,8 +16,11 @@
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- Font Awesome-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<link rel="stylesheet" type="text/css" href="css/meal-decider.css">
+
 	
 
 </head>
@@ -31,20 +34,28 @@
 			</div>
 		</div>
 
+		<div class="row text-center" id="author">
+			<div class="col-md-12">
+					<a href="https://github.com/promie/meal-decider" target="_blank"><i class="fa fa-github github" aria-hidden="true"></i></a><span class="author">Developed by P Yutasane</span>
+					
+			</div>
+		</div>
+
+
 		<div class="row" id="tableBox">
 			<div class="col-md-12">
 					<div class="panel panel-default">
 							<!-- Default panel contents -->
 							<div class="panel-heading"><h4 class="meal-name text-center" id="meal-name"></h4></div>
 							<div class="panel-body">
-							  <p id="food-description"></p>
+							  <p id="food-description" class="text-font"></p>
 							</div>
 						  
 							<!-- List group -->
 							<ul class="list-group">
-							  <li class="list-group-item"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="bold-text">Calories</span><br><br><p id="calories"></p></li>
-							  <li class="list-group-item"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> <span class="bold-text">Nutritional Facts</span><br><br><p id="nutrition"></p></li>
-							  <li class="list-group-item"><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> <span class="bold-text">Recommended Restaurant(s)</span><br><br><p id="recommendation"></p></li>
+							  <li class="list-group-item"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="bold-text">Calories</span><br><br><p id="calories" class="text-font"></p></li>
+							  <li class="list-group-item"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> <span class="bold-text">Nutritional Facts</span><br><br><p id="nutrition" class="text-font"></p></li>
+							  <li class="list-group-item"><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> <span class="bold-text">Recommended Restaurant(s)</span><br><br><p id="recommendation" class="text-font"></p></li>
 							  
 							</ul>
 						  </div>

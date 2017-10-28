@@ -10,10 +10,6 @@ Check out the completed projected - [Meal Decider](https://promie.github.io/meal
 
 # Preview
 
-**Main Page**
-![alt text](https://github.com/promie/meal-decider/blob/master/img/preview-1.JPG "Front App")
-
-**Food Recommendation**
 ![alt text](https://github.com/promie/meal-decider/blob/master/img/preview-2.JPG "Main App")
 
 

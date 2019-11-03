@@ -1,86 +1,139 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Meal Decider</title>
 
-<head>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
 
-	<meta charset="utf-8" />
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<title>Meal Decider</title>
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-	
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/meal-decider.css" />
+  </head>
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	<!-- Font Awesome-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center marginTop">
+          <img
+            src="img/meal-decider-logo.png"
+            alt="Meal Decider Logo"
+            class="meal-decider-logo"
+            id="meal-decider-logo"
+          />
+          <img
+            src="img/meal-0.png"
+            alt="Meal Image"
+            class="meal-image"
+            id="meal-image"
+          />
+        </div>
+      </div>
 
-	<link rel="stylesheet" type="text/css" href="css/meal-decider.css">
+      <div class="row text-center" id="author">
+        <div class="col-md-12">
+          <a href="https://github.com/promie/meal-decider" target="_blank"
+            ><i class="fa fa-github github" aria-hidden="true"></i></a
+          ><span class="author">Developed by P Yutasane</span>
+        </div>
+      </div>
 
-	
+      <div class="row" id="tableBox">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">
+              <h4 class="meal-name text-center" id="meal-name"></h4>
+            </div>
+            <div class="panel-body">
+              <p id="food-description" class="text-font"></p>
+            </div>
 
-</head>
+            <!-- List group -->
+            <ul class="list-group">
+              <li class="list-group-item">
+                <span
+                  class="glyphicon glyphicon-exclamation-sign"
+                  aria-hidden="true"
+                ></span>
+                <span class="bold-text">Calories</span><br /><br />
+                <p id="calories" class="text-font"></p>
+              </li>
+              <li class="list-group-item">
+                <span
+                  class="glyphicon glyphicon-info-sign"
+                  aria-hidden="true"
+                ></span>
+                <span class="bold-text">Nutritional Facts</span><br /><br />
+                <p id="nutrition" class="text-font"></p>
+              </li>
+              <li class="list-group-item">
+                <span
+                  class="glyphicon glyphicon-cutlery"
+                  aria-hidden="true"
+                ></span>
+                <span class="bold-text">Recommended Restaurant(s)</span
+                ><br /><br />
+                <p id="recommendation" class="text-font"></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-<body>
-	<div class="container">
+      <div class="row">
+        <div class="col-md-12 moving-element text-center">
+          <button
+            onclick="runProgram()"
+            type="button"
+            id="run"
+            class="runProgram"
+          >
+            Start
+          </button>
+        </div>
+      </div>
+    </div>
 
-
-		<div class="row">
-			<div class="col-md-12 text-center marginTop">
-				<img src="img/meal-decider-logo.png" alt="Meal Decider Logo" class="meal-decider-logo" id="meal-decider-logo">	
-				<img src="img/meal-0.png" alt="Meal Image" class="meal-image" id="meal-image">
-			</div>
-		</div>
-
-		<div class="row text-center" id="author">
-			<div class="col-md-12">
-					<a href="https://github.com/promie/meal-decider" target="_blank"><i class="fa fa-github github" aria-hidden="true"></i></a><span class="author">Developed by P Yutasane</span>
-					
-			</div>
-		</div>
-
-		<div class="row" id="tableBox">
-			<div class="col-md-12">
-					<div class="panel panel-default">
-							<!-- Default panel contents -->
-							<div class="panel-heading"><h4 class="meal-name text-center" id="meal-name"></h4></div>
-							<div class="panel-body">
-							  <p id="food-description" class="text-font"></p>
-							</div>
-						  
-							<!-- List group -->
-							<ul class="list-group">
-							  <li class="list-group-item"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="bold-text">Calories</span><br><br><p id="calories" class="text-font"></p></li>
-							  <li class="list-group-item"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> <span class="bold-text">Nutritional Facts</span><br><br><p id="nutrition" class="text-font"></p></li>
-							  <li class="list-group-item"><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> <span class="bold-text">Recommended Restaurant(s)</span><br><br><p id="recommendation" class="text-font"></p></li>
-							  
-							</ul>
-						  </div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12 moving-element text-center">
-					<button onclick="runProgram()" type="button" id="run" class="runProgram">Start</button>
-			</div>			
-		</div>
-
-	</div>
-
-	<!--jQuery-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!--jQuery UI-->
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-	<!--Latest compiled and minified JavaScript-->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<!--Main JS File (Local)-->
-	<script type="text/javascript" src="js/meal-decider.js"></script>
-
-</body>
-
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--jQuery UI-->
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+    ></script>
+    <!--Latest compiled and minified JavaScript-->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <!--Main JS File (Local)-->
+    <script type="text/javascript" src="js/meal-decider.js"></script>
+  </body>
 </html>
